@@ -1,4 +1,3 @@
-spring.application.name=microserviceproducts
 server.port=9090
 spring.datasource.url=jdbc:h2:mem:testDb
 spring.datasource.username=ayoub
@@ -6,14 +5,14 @@ spring.datasource.driver-class-name=org.h2.Driver
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 
-spring.config.import=optional:configserver::http://localhost:9091
-
-spring.cloud.discovery.enabled=true
-
-spring.cloud.config.discovery.enabled=false
-
-spring.cloud.discovery.enabled=true
-eureka.client.fetch-registry=false
+# Désactiver Eureka si vous ne l'utilisez pas
 eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false
 
+# Management endpoints pour /refresh
+management.endpoints.enabled-by-default=true
+management.endpoints.web.exposure.include=refresh
+
+# Configuration personnalisée
 mes-configs.limiteDeproduits=3
+
