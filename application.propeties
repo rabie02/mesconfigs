@@ -8,12 +8,12 @@ spring.h2.console.path=/h2-console
 
 spring.config.import=optional:configserver:
 
-spring.cloud.discovery.enabled=false
+spring.cloud.discovery.enabled=true
 
 spring.cloud.config.discovery.enabled=false
 
-eureka.client.register-with-eureka=false
+spring.cloud.discovery.enabled=true
 eureka.client.fetch-registry=false
-spring.cloud.config.enabled=false
+eureka.client.register-with-eureka=false
 
 mes-configs.limiteDeproduits=3
